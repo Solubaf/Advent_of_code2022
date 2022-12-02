@@ -33,10 +33,10 @@ const partTwo = (input) => {
 
     return top3.reduce((cur,acc)=>acc+cur,0);
 };
-//
-['example.in', 'puzzle.in'].forEach((file) => {
+//, 'puzzle.in'
+['example.in'].forEach((file) => {
     const input = fs.readFileSync(`day1/${file}`, 'utf-8').trim().split('\r\n\r\n');
-    //console.log(input);
+    console.log(input);
     console.log(`Result of part one for ${file} : ` + partOne(input) + ` (executed in ${timer(partOne, input)} ms)`);
     console.log(`Result of part two for ${file} : ` + partTwo(input) + ` (executed in ${timer(partTwo, input)} ms)`);
 });
